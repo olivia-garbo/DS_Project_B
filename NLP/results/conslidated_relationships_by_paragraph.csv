@@ -1,0 +1,12 @@
+Relationship,Entity1,Entity2,Entity1_ID,Entity2_ID
+sister,Bingley,Elizabeth,N/A,Q0001
+mother,Longbourn,Jane,N/A,Q0005
+daughters,Bennet,Elizabeth,Q0003,Q0001
+daughters,Bennet,Lydia,Q0003,Q0008
+sister,Darcy,Wickham,Q0002,N/A
+daughter,William Lucas,Maria,N/A,N/A
+daughter,Lady Catherine,Fitzwilliam,Q0013,N/A
+daughter,Darcy,Darcy,Q0002,Q0002
+brother,Darcy,Gardiner,Q0002,Q0014
+brother,Gardiner,Bennet,Q0014,Q0003
+wife,Elizabeth,Longbourn,Q0001,N/A

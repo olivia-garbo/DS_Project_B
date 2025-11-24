@@ -1,0 +1,178 @@
+Relationship,Entity1,Entity2,Entity1_ID,Entity2_ID,Mode,Source
+husband,Mrs Bennet,Charles Bingley,Q0006,Q0004,sentence,main1
+friend,Mr Hurst,Fitzwilliam Darcy,Q0021,Q0001,sentence,main1
+sister,Elizabeth Bennet,Jane Bennet,Q0002,Q0003,sentence,main1
+sister,Charles Bingley,Elizabeth Bennet,Q0004,Q0002,sentence,main1
+friend,Charlotte Lucas,Elizabeth Bennet,Q0011,Q0002,sentence,main1
+aunt,Lydia Bennet,Colonel Forster,Q0007,N/A,sentence,main1
+daughter,Mrs Bennet,Jane Bennet,Q0006,Q0003,sentence,main1
+daughter,Elizabeth Bennet,Charles Bingley,Q0002,Q0004,sentence,main1
+sister,Fitzwilliam Darcy,Elizabeth Bennet,Q0001,Q0002,sentence,main1
+father,Caroline Bingley,Fitzwilliam Darcy,Q0016,Q0001,sentence,main1
+sister,Elizabeth Bennet,Charles Bingley,Q0002,Q0004,sentence,main1
+mother,Mrs Bennet,Jane Bennet,Q0006,Q0003,sentence,main1
+mother,Elizabeth Bennet,Charlotte Lucas,Q0002,Q0011,sentence,main1
+sister,Louisa Hurst,Elizabeth Bennet,Q0020,Q0002,sentence,main1
+friend,Caroline Bingley,Jane Bennet,Q0016,Q0003,sentence,main1
+sister,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,sentence,main1
+sister,Charles Bingley,Elizabeth Bennet,Q0004,Q0002,sentence,main1
+uncle,Lydia Bennet,Richard,Q0007,N/A,sentence,main1
+cousin,William Collins,John Bennet,Q0012,Q0005,sentence,main1
+sister,Meryton,Mary Bennet,N/A,Q0008,sentence,main1
+friend,Mr. Denny,George Wickham,N/A,Q0010,sentence,main1
+aunt,Philipses,George Wickham,N/A,Q0010,sentence,main1
+husband,Philipses,George Wickham,N/A,Q0010,sentence,main1
+friend,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,sentence,main1
+father,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,sentence,main1
+father,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,sentence,main1
+cousin,William Collins,Elizabeth Bennet,Q0012,Q0002,sentence,main1
+aunt,Lady Anne Darcy,Fitzwilliam Darcy,N/A,Q0001,sentence,main1
+daughter,Mrs Bennet,Charles Bingley,Q0006,Q0004,sentence,main1
+brother,Jane Bennet,Elizabeth Bennet,Q0003,Q0002,sentence,main1
+cousin,Elizabeth Bennet,Jane Bennet,Q0002,Q0003,sentence,main1
+friend,Fitzwilliam Darcy,Mr. Denny,Q0001,N/A,sentence,main1
+sister,Elizabeth Bennet,Charles Bingley,Q0002,Q0004,sentence,main1
+friend,Fitzwilliam Darcy,Charles Bingley,Q0001,Q0004,sentence,main1
+sister,"George
+Wickham!--Your",George Wickham,N/A,Q0010,sentence,main1
+son,"George
+Wickham!--Your",George Wickham,N/A,Q0010,sentence,main1
+son,Elizabeth Bennet,Fitzwilliam Darcy,Q0002,Q0001,sentence,main1
+friend,Fitzwilliam Darcy,George Wickham,Q0001,Q0010,sentence,main1
+sister,Fitzwilliam Darcy,George Wickham,Q0001,Q0010,sentence,main1
+mother,Anne de Bourgh,Lady Catherine de Bourgh,Q0023,Q0013,sentence,main1
+aunt,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,sentence,main1
+sister,Elizabeth Bennet,Charles Bingley,Q0002,Q0004,sentence,main1
+mother,Elizabeth Bennet,Fitzwilliam Darcy,Q0002,Q0001,sentence,main1
+wife,John Bennet,William Collins,Q0005,Q0012,sentence,main1
+mother,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,sentence,main1
+daughter,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,sentence,main1
+friend,Charlotte Lucas,Elizabeth Bennet,Q0011,Q0002,sentence,main1
+brother,Caroline Bingley,Georgiana Darcy,Q0016,Q0015,sentence,main1
+brother,Georgiana Darcy,Anne de Bourgh,Q0015,Q0023,sentence,main1
+brother,Caroline Bingley,Georgiana Darcy,Q0016,Q0015,sentence,main1
+friend,William Collins,Elizabeth Bennet,Q0012,Q0002,sentence,main1
+friend,William Collins,CHAPTER XXIII,Q0012,N/A,sentence,main1
+friend,William Collins,CHAPTER XXIII,Q0012,N/A,sentence,main1
+mother,Elizabeth Bennet,Sir William Lucas,Q0002,Q0019,sentence,main1
+mother,Elizabeth Bennet,Sir William Lucas,Q0002,Q0019,sentence,main1
+daughter,Mrs Bennet,Mrs Bennet,Q0006,Q0006,sentence,main1
+brother,Caroline Bingley,Georgiana Darcy,Q0016,Q0015,sentence,main1
+aunt,Miss Bennet,Bingleys,N/A,N/A,sentence,main1
+sister,Jane Bennet,Elizabeth Bennet,Q0003,Q0002,sentence,main1
+sister,Fitzwilliam Darcy,George Wickham,Q0001,Q0010,sentence,main1
+daughter,Sir William Lucas,Maria,Q0019,N/A,sentence,main1
+niece,Mrs Gardiner,George Wickham,Q0018,Q0010,sentence,main1
+friend,Charlotte Lucas,Elizabeth Bennet,Q0011,Q0002,sentence,main1
+daughter,Lady Catherine de Bourgh,Mrs. Jenkinson,Q0013,N/A,sentence,main1
+daughter,Fitzwilliam Darcy,Maria,Q0001,N/A,sentence,main1
+son,Fitzwilliam Darcy,Elizabeth Bennet,Q0001,Q0002,sentence,main1
+father,Catherine Bennet,William Collins,Q0009,Q0012,sentence,main1
+daughter,Lady Catherine de Bourgh,Charlotte Lucas,Q0013,Q0011,sentence,main1
+friend,Elizabeth Bennet,William Collins,Q0002,Q0012,sentence,main1
+wife,William Collins,Elizabeth Bennet,Q0012,Q0002,sentence,main1
+cousin,Caroline Bingley,Lady Catherine de Bourgh,Q0016,Q0013,sentence,main1
+son,Colonel Fitzwilliam,William Collins,Q0014,Q0012,sentence,main1
+uncle,Colonel Fitzwilliam,William Collins,Q0014,Q0012,sentence,main1
+cousin,Colonel Fitzwilliam,Charlotte Lucas,Q0014,Q0011,sentence,main1
+cousin,Fitzwilliam Darcy,Lady Catherine de Bourgh,Q0001,Q0013,sentence,main1
+friend,Charlotte Lucas,Fitzwilliam Darcy,Q0011,Q0001,sentence,main1
+friend,Fitzwilliam Darcy,Elizabeth Bennet,Q0001,Q0002,sentence,main1
+cousin,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,sentence,main1
+friend,Fitzwilliam Darcy,Charles Bingley,Q0001,Q0004,sentence,main1
+husband,Charlotte Lucas,William Collins,Q0011,Q0012,sentence,main1
+cousin,Kent,Colonel Fitzwilliam,N/A,Q0014,sentence,main1
+father,Charles Bingley,Charles Bingley,Q0004,Q0004,sentence,main1
+sister,Charles Bingley,Sir William Lucas,Q0004,Q0019,sentence,main1
+son,George Wickham,George Wickham,Q0010,Q0010,sentence,main1
+father,George Wickham,George Wickham,Q0010,Q0010,sentence,main1
+daughter,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,sentence,main1
+sister,Charles Bingley,CHAPTER XVI,Q0004,N/A,sentence,main1
+daughter,Maria,Mrs Bennet,N/A,Q0006,sentence,main1
+sister,Jane Bennet,Fitzwilliam Darcy,Q0003,Q0001,sentence,main1
+mother,Elizabeth Bennet,Lydia Bennet,Q0002,Q0007,sentence,main1
+daughter,Elizabeth Bennet,Lydia Bennet,Q0002,Q0007,sentence,main1
+mother,Lydia Bennet,Catherine Bennet,Q0007,Q0009,sentence,main1
+niece,Mrs Gardiner,Elizabeth Bennet,Q0018,Q0002,sentence,main1
+brother,Georgiana Darcy,Mr Gardiner,Q0015,Q0017,sentence,main1
+aunt,Elizabeth Bennet,George Wickham,Q0002,Q0010,sentence,main1
+sister,Fitzwilliam Darcy,Mrs Gardiner,Q0001,Q0018,sentence,main1
+niece,Mrs Gardiner,Elizabeth Bennet,Q0018,Q0002,sentence,main1
+son,George Wickham,Fitzwilliam Darcy,Q0010,Q0001,sentence,main1
+brother,Georgiana Darcy,Elizabeth Bennet,Q0015,Q0002,sentence,main1
+friend,Caroline Bingley,Elizabeth Bennet,Q0016,Q0002,sentence,main1
+brother,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,sentence,main1
+father,Jane Bennet,Lydia Bennet,Q0003,Q0007,sentence,main1
+mother,Jane Bennet,Lydia Bennet,Q0003,Q0007,sentence,main1
+niece,Mrs Gardiner,Lydia Bennet,Q0018,Q0007,sentence,main1
+aunt,Jane Bennet,George Wickham,Q0003,Q0010,sentence,main1
+sister,Elizabeth Bennet,Jane Bennet,Q0002,Q0003,sentence,main1
+father,Mr Gardiner,William Collins,Q0017,Q0012,sentence,main1
+daughter,Charlotte Lucas,Mrs Bennet,Q0011,Q0006,sentence,main1
+mother,Elizabeth Bennet,Miss Bennet,Q0002,N/A,sentence,main1
+sister,Elizabeth Bennet,Mr Gardiner,Q0002,Q0017,sentence,main1
+mother,Lydia Bennet,Jane Bennet,Q0007,Q0003,sentence,main1
+sister,Lydia Bennet,Jane Bennet,Q0007,Q0003,sentence,main1
+sister,Mr Gardiner,George Wickham,Q0017,Q0010,sentence,main1
+sister,George Wickham,Elizabeth Bennet,Q0010,Q0002,sentence,main1
+mother,Elizabeth Bennet,Fitzwilliam Darcy,Q0002,Q0001,sentence,main1
+mother,Charles Bingley,Elizabeth Bennet,Q0004,Q0002,sentence,main1
+daughter,Mrs Bennet,Jane Bennet,Q0006,Q0003,sentence,main1
+mother,Elizabeth Bennet,Catherine Bennet,Q0002,Q0009,sentence,main1
+sister,Elizabeth Bennet,Jane Bennet,Q0002,Q0003,sentence,main1
+friend,Elizabeth Bennet,Jane Bennet,Q0002,Q0003,sentence,main1
+nephew,Miss Elizabeth Bennet,Fitzwilliam Darcy,N/A,Q0001,sentence,main1
+nephew,Miss Elizabeth Bennet,Fitzwilliam Darcy,N/A,Q0001,sentence,main1
+friend,Elizabeth Bennet,Charles Bingley,Q0002,Q0004,sentence,main1
+sister,Charles Bingley,Jane Bennet,Q0004,Q0003,sentence,main1
+cousin,Charlotte Lucas,Lydia Bennet,Q0011,Q0007,sentence,main1
+aunt,Mrs Bennet,Charles Bingley,Q0006,Q0004,sentence,main1
+daughter,Mrs Bennet,Charles Bingley,Q0006,Q0004,sentence,main1
+friend,Charles Bingley,Charles Bingley,Q0004,Q0004,sentence,main1
+husband,Charles Bingley,Charles Bingley,Q0004,Q0004,sentence,main1
+father,Elizabeth Bennet,John Bennet,Q0002,Q0005,sentence,main1
+husband,George Wickham,Jane Bennet,Q0010,Q0003,sentence,main1
+wife,Elizabeth Bennet,Fitzwilliam Darcy,Q0002,Q0001,sentence,main1
+wife,Elizabeth Bennet,Mrs Bennet,Q0002,Q0006,sentence,main1
+sister,Mrs. Philips,Charles Bingley,N/A,Q0004,sentence,main1
+daughter,Mary Bennet,Mrs Bennet,Q0008,Q0006,sentence,main1
+husband,Lydia Bennet,Bingleys,Q0007,N/A,sentence,main1
+nephew,Lady Catherine de Bourgh,Elizabeth Bennet,Q0013,Q0002,sentence,main1
+sister,Elizabeth Bennet,Charles Bingley,Q0002,Q0004,100token,main2
+sister,Mary Bennet,Mary Bennet,Q0008,Q0008,100token,main2
+sister,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,100token,main2
+sister,Charles Bingley,eldest,Q0004,N/A,100token,main2
+friend,Jane Bennet,Jane Bennet,Q0003,Q0003,100token,main2
+sister,Charles Bingley,Charles Bingley,Q0004,Q0004,100token,main2
+friend,George Wickham,George Wickham,Q0010,Q0010,100token,main2
+daughter,Catherine Bennet,Catherine Bennet,Q0009,Q0009,100token,main2
+cousin,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,100token,main2
+daughter,Lady Catherine de Bourgh,Lady Catherine de Bourgh,Q0013,Q0013,100token,main2
+cousin,Lady Catherine de Bourgh,Lady Catherine de Bourgh,Q0013,Q0013,100token,main2
+daughter,Charles Bingley,himself,Q0004,N/A,100token,main2
+friend,Denny,George Wickham,N/A,Q0010,100token,main2
+cousin,Lady Catherine de Bourgh,Catherine Bennet,Q0013,Q0009,100token,main2
+friend,Charlotte Lucas,Charlotte Lucas,Q0011,Q0011,100token,main2
+wife,Charlotte Lucas,Charlotte Lucas,Q0011,Q0011,100token,main2
+brother,Caroline Bingley,Caroline Bingley,Q0016,Q0016,100token,main2
+daughter,Fitzwilliam Darcy,daughter,Q0001,N/A,100token,main2
+father,Fitzwilliam Darcy,daughter,Q0001,N/A,100token,main2
+daughter,Charlotte Lucas,Maria,Q0011,N/A,100token,main2
+daughter,Maria,Maria,N/A,N/A,100token,main2
+cousin,Charlotte Lucas,herself,Q0011,N/A,100token,main2
+son,Fitzwilliam Darcy,Charlotte Lucas,Q0001,Q0011,100token,main2
+son,Fitzwilliam Darcy,Charlotte Lucas,Q0001,Q0011,100token,main2
+daughter,Catherine Bennet,daughter,Q0009,N/A,100token,main2
+friend,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,100token,main2
+sister,Jane.--She,Jane.--Jane.--She,N/A,N/A,100token,main2
+daughter,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,100token,main2
+daughter,Fitzwilliam Darcy,Fitzwilliam Darcy,Q0001,Q0001,100token,main2
+father,Lydia Bennet,Lydia Bennet,Q0007,Q0007,100token,main2
+brother,Mr Gardiner,himself,Q0017,N/A,100token,main2
+daughter,Catherine Bennet,Catherine Bennet,Q0009,Q0009,100token,main2
+sister,Jane Bennet,Elizabeth Bennet,Q0003,Q0002,100token,main2
+uncle,Fitzwilliam Darcy,herself,Q0001,N/A,100token,main2
+daughter,Elizabeth Bennet,Elizabeth Bennet,Q0002,Q0002,100token,main2
+aunt,Lady Catherine de Bourgh,Lady Catherine de Bourgh,Q0013,Q0013,100token,main2
+friend,Charles Bingley,Jane Bennet,Q0004,Q0003,100token,main2
+sister,Philips,Charles Bingley,N/A,Q0004,100token,main2

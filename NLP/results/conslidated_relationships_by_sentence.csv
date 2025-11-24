@@ -1,0 +1,111 @@
+Relationship,Entity1,Entity2,Entity1_ID,Entity2_ID
+daughters,Bennet,Bingley,Q0003,N/A
+friend,Hurst,Darcy,N/A,Q0002
+sister,Elizabeth,Jane,Q0001,Q0005
+sister,Bingley,Elizabeth,N/A,Q0001
+friend,Lucas,Elizabeth,N/A,Q0001
+daughter,Bennet,Jane,Q0003,Q0005
+daughter,Elizabeth,Bingley,Q0001,N/A
+sister,Darcy,Elizabeth,Q0002,Q0001
+father,Bingley,Darcy,N/A,Q0002
+sister,Elizabeth,Bingley,Q0001,N/A
+mother,Longbourn,Jane,N/A,Q0005
+mother,Elizabeth,Charlotte Lucas,Q0001,N/A
+daughters,Bennet,Elizabeth,Q0003,Q0001
+sister,Hurst,Elizabeth,N/A,Q0001
+friend,Bingley,Jane,N/A,Q0005
+sister,Elizabeth,Elizabeth,Q0001,Q0001
+daughters,Bennet,Jane,Q0003,Q0005
+sister,Bingley,Elizabeth,N/A,Q0001
+daughters,Bennet,Lydia,Q0003,Q0008
+sister,Meryton,Mary,N/A,Q0006
+daughters,Collins,Collins,Q0012,Q0012
+friend,Denny,Wickham,N/A,N/A
+husband,Philipses,Wickham,N/A,N/A
+friend,Darcy,Darcy,Q0002,Q0002
+father,Darcy,Darcy,Q0002,Q0002
+daughter,Bennet,Bingley,Q0003,N/A
+friends,Jane,Elizabeth,Q0005,Q0001
+friend,Darcy,Denny,Q0002,N/A
+sister,Eliza,Bingley,N/A,N/A
+friend,William,Bingley,Q0012,N/A
+sister,"George
+Wickham!--Your",Wickham,N/A,N/A
+son,Elizabeth,Darcy,Q0001,Q0002
+friend,Darcy,Wickham,Q0002,N/A
+sister,Darcy,Wickham,Q0002,N/A
+mother,Miss de Bourgh,Catherine,N/A,Q0007
+sister,Elizabeth,Bingley,Q0001,N/A
+mother,Elizabeth,Darcy,Q0001,Q0002
+wife,Bennet,Collins,Q0003,Q0012
+mother,Elizabeth,Elizabeth,Q0001,Q0001
+friend,Lucas,Lizzy,N/A,N/A
+brother,Bingley,Darcy,N/A,Q0002
+brother,Darcy,Miss de Bourgh,Q0002,N/A
+brother,Bingley,Darcy,N/A,Q0002
+friend,Collins,Elizabeth,Q0012,Q0001
+friend,Collins,CHAPTER XXIII,Q0012,N/A
+mother,Elizabeth,William Lucas,Q0001,N/A
+mother,Elizabeth,William,Q0001,Q0012
+daughter,Bennet,Bennet,Q0003,Q0003
+daughters,Longbourn,Bennet,N/A,Q0003
+brother,Caroline,Darcy,Q0010,Q0002
+friends,Bingley,Jane,N/A,Q0005
+sister,Jane,Elizabeth,Q0005,Q0001
+sister,Darcy,Wickham,Q0002,N/A
+daughter,William Lucas,Maria,N/A,N/A
+friend,Collins,Elizabeth,N/A,Q0001
+daughter,Lady Catherine,Jenkinson,Q0013,N/A
+daughter,Darcy,Maria,Q0002,N/A
+son,William,Elizabeth,Q0012,Q0001
+father,Catherine,Collins,Q0007,Q0012
+daughter,Lady Catherine,Collins,Q0013,N/A
+friend,Elizabeth,Collins,Q0001,Q0012
+wife,Collins,Elizabeth,Q0012,Q0001
+son,Fitzwilliam,Collins,N/A,Q0012
+friend,Collins,Darcy,N/A,Q0002
+friend,Fitzwilliam,Eliza,N/A,N/A
+friend,Darcy,Bingley,Q0002,N/A
+husband,Collins,Collins,N/A,Q0012
+father,Bingley,Bingley,N/A,N/A
+son,Wickham,George Wickham,N/A,N/A
+daughter,Darcy,Darcy,Q0002,Q0002
+sister,Bingley,CHAPTER XVI,N/A,N/A
+daughter,Maria,Bennet,N/A,Q0003
+sister,Jane,Darcy,Q0005,Q0002
+mother,Elizabeth,Lydia,Q0001,Q0008
+daughter,Bennet,Lydia,Q0003,Q0008
+mother,Lydia,Kitty,Q0008,Q0007
+brother,Darcy,Gardiner,Q0002,Q0014
+friends,Elizabeth,Darcy,Q0001,Q0002
+sister,Darcy,Gardiner,Q0002,N/A
+son,Wickham,Darcy,N/A,Q0002
+brother,Darcy,Elizabeth,Q0002,Q0001
+friend,Bingley,Elizabeth,N/A,Q0001
+brother,Elizabeth,Elizabeth,Q0001,Q0001
+father,Jane,Lydia,Q0005,Q0008
+sister,Elizabeth,Jane,Q0001,Q0005
+father,Gardiner,Collins,Q0014,Q0012
+daughter,Charlotte,Bennet,Q0017,Q0003
+mother,Elizabeth,Bennet,Q0001,Q0003
+sister,Elizabeth,Gardiner,Q0001,Q0014
+daughters,Bennet,Gardiner,Q0003,Q0014
+mother,Lydia,Jane,Q0008,Q0005
+sister,Gardiner,Wickham,Q0014,N/A
+sister,Wickham,Elizabeth,N/A,Q0001
+mother,Elizabeth,Darcy,Q0001,Q0002
+mother,Bingley,Bennet,N/A,Q0003
+daughter,Bennet,Jane,Q0003,Q0005
+mother,Elizabeth,Kitty,Q0001,Q0007
+sister,Elizabeth,Jane,Q0001,Q0005
+friend,Elizabeth,Jane,Q0001,Q0005
+friend,Elizabeth,Bingley,Q0001,N/A
+daughter,Bennet,Bingley,Q0003,N/A
+friend,Bingley,Bingley,N/A,N/A
+father,Elizabeth,Bennet,Q0001,Q0003
+husband,Wickham,Jane,N/A,Q0005
+wife,Elizabeth,Darcy,Q0001,Q0002
+wife,Elizabeth,Longbourn,Q0001,N/A
+sister,Philips,Bingley,N/A,N/A
+daughter,Mary,Bennet,Q0006,Q0003
+husband,Lydia,Bingleys,Q0008,N/A
