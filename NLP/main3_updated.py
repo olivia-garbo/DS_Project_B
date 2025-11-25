@@ -100,11 +100,6 @@ def build_knowledge_base(nlp):
 
 
 def load_knowledge_base(nlp):
-    """
-    ✅ 加载 characters_updated.csv 为 Knowledge Base（支持 Name + Aliases）
-    ✅ 自动清洗空格、句号、大小写
-    ✅ 多别名支持: 用分号 / 逗号 / 制表符分割
-    """
 
     kb = {}
     filepath = "characters_updated.csv"
@@ -295,7 +290,7 @@ def chapter_parse_relations(sentence_chunks, nlp):
             all_relationships.append((rel, e1, e2))
 
         if (i + 1) % 300 == 0:
-            print(f"🟦 main1 processed {i+1}/{len(sentence_chunks)} sentences")
+            print(f" main1 processed {i+1}/{len(sentence_chunks)} sentences")
 
     return all_relationships
 
@@ -404,13 +399,13 @@ def consolidate_relationships_entities(relationships, kb, default_mode="sentence
     df = pd.DataFrame(rows)
     df.to_csv("consolidated_relationships.csv", index=False, encoding="utf-8")
 
-    print(f"🎉 Saved {len(df)} relationships → consolidated_relationships.csv")
+    print(f" Saved {len(df)} relationships → consolidated_relationships.csv")
 
 
 
 # ========== 11. main function ==========
 def main():
-    print("✅ Loading spaCy model...")
+    print("Loading spaCy model...")
     nlp = spacy.load("en_core_web_lg")
 
     print("===================================================")
@@ -471,7 +466,7 @@ def main():
     # consolidate
     # ============================
     print("===================================================")
-    print("📦 Consolidating results with KB...")
+    print(" Consolidating results with KB...")
     consolidate_relationships_entities(all_relationships, kb, default_mode="mixed")
 
     print("DONE!")
