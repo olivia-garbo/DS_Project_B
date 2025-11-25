@@ -6,7 +6,7 @@ from spacy.util import filter_spans
 import pandas as pd
 
 
-# ========== 1. 加载人物实体 ==========
+# ========== 1. Load the character entity ==========
 def load_entities():
     entities_path = "characters_updated.csv"
     names, aliases = {}, {}
@@ -22,7 +22,7 @@ def load_entities():
     return names, aliases
 
 
-# ========== 2. 清洗名字 ==========
+# ========== 2. Clean the name ==========
 def clean_name(name):
     for ch in [" ", "\n", ".", '"', "'", "!"]:
         name = name.replace(ch, "")
@@ -31,7 +31,7 @@ def clean_name(name):
     return name
 
 
-# ========== 3. 称谓扩展 ==========
+# ========== 3. Title expansion ==========
 def get_person_title(span):
     titles = ["Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms", "Lady", "Sir",
               "Colonel", "Capt", "Captain", "Lord", "Rev", "Rev.", "General", "Gen."]
@@ -65,7 +65,7 @@ def extend_person_entity(doc):
 Span.set_extension("person_title", default="")
 
 
-# ========== 4. 关系词标注 ==========
+# ========== 4. Relation word annotation ==========
 def build_reliationships(doc, nlp):
     matcher = Matcher(nlp.vocab)
     relationship_terms = [
@@ -85,7 +85,7 @@ def build_reliationships(doc, nlp):
     return doc
 
 
-# ========== 5. 构建知识库 ==========
+# ========== 5.Build a knowledge base  ==========
 def build_knowledge_base(nlp):
     names, aliases = load_entities()
     kb = InMemoryLookupKB(vocab=nlp.vocab, entity_vector_length=300)
@@ -110,7 +110,7 @@ def load_knowledge_base(nlp):
     filepath = "characters_updated.csv"
 
     if not os.path.exists(filepath):
-        raise FileNotFoundError(f"❌ {filepath} not found!")
+        raise FileNotFoundError(f" {filepath} not found!")
 
     with open(filepath, "r", encoding="utf-8") as file:
         reader = csv.reader(file)
@@ -126,7 +126,7 @@ def load_knowledge_base(nlp):
             qid = row[0].strip()
             name = row[1].strip()
 
-            # 🔹 支持多种分隔符，并去掉引号
+            
             aliases = []
             if len(row) > 2 and row[2].strip():
                 alias_str = row[2].replace('"', '').replace("'", "")
@@ -138,12 +138,12 @@ def load_knowledge_base(nlp):
 
             kb[qid] = {"name": name, "aliases": aliases}
 
-    print(f"✅ Loaded {len(kb)} characters from knowledge base.")
+    print(f"Loaded {len(kb)} characters from knowledge base.")
     return kb
 
 
 
-# ========== 6. 文本分块 ==========
+# ========== 6. text segmentation ==========
 def divide_text_by(nlp, text, by="sentence"):
     if by == "chapter":
         return re.split(r"CHAPTER [IVXLC]+", text)
@@ -167,16 +167,16 @@ def divide_text_by(nlp, text, by="sentence"):
         return [text]
 
 
-# ========== 7. main1：顺序匹配 ==========
+# ========== 7. main1：sequence pattern==========
 def extract_relationships_bidirectional(doc, filter_pronoun=False):
     """
-    基于实体顺序的关系抽取（改进版）
-    - 逻辑核心：PERSON — RELATIONSHIP — PERSON 顺序匹配
-    - 不去掉代词 (her, his, their)；保留以捕捉 "her friend Charlotte" 等句式
-    - 自动标准化关系词为小写
+   Relation Extraction Based on Entity Order (Improved Version) 
+    - Logical core: Person-relationship-Person sequence matching 
+    - Do not remove the pronouns (her, his, their); Retain to capture sentence patterns such as "her friend Charlotte" 
+    Automatically standardize relation words to lowercase
     """
 
-    # 🔹 定义关键词
+    # relatiosnship set`
     REL_WORDS = {
         "father", "mother", "brother", "sister", "wife", "husband",
         "son", "daughter", "parent", "aunt", "uncle", "cousin",
@@ -184,25 +184,25 @@ def extract_relationships_bidirectional(doc, filter_pronoun=False):
         "friend", "lover", "partner", "companion", "relative", "family", "couple"
     }
 
-    # 🔹 定义代词集合（可供后续分析使用）
+    # Define the set of pronouns (for subsequent analysis)
     PRONOUNS = {"his", "her", "their", "my", "your", "our", "its", "him", "me", "them", "you"}
 
-    # 🔹 只保留 PERSON / RELATIONSHIP 实体
+    # 🔹 keep PERSON / RELATIONSHIP entities
     ents = [ent for ent in doc.ents if ent.label_ in ["PERSON", "RELATIONSHIP"]]
 
     relationships = []
 
-    # 🔹 遍历实体，寻找关系词居中的模式
+    # Traverse the entities to look for patterns where the relational words are centered
     for i, ent in enumerate(ents):
         if ent.label_ == "RELATIONSHIP" and ent.text.lower() in REL_WORDS:
 
-            # 找到左侧第一个 PERSON（保留 pronoun）
+            # Find the first PERSON on the left
             left_person = next(
                 (e for e in reversed(ents[:i]) if e.label_ == "PERSON"),
                 None
             )
 
-            # 找到右侧第一个 PERSON（保留 pronoun）
+            # Find the first PERSON on the right
             right_person = next(
                 (e for e in ents[i + 1:] if e.label_ == "PERSON"),
                 None
@@ -220,7 +220,7 @@ def extract_relationships_bidirectional(doc, filter_pronoun=False):
 
 
 
-# ========== 8. main2：依存句法匹配 ==========
+# ========== 8. main2：dependcy paring ==========
 def extract_dependency_relations(doc):
     REL_WORDS = {
         "father", "mother", "brother", "sister", "wife", "husband",
@@ -302,15 +302,15 @@ def chapter_parse_relations(sentence_chunks, nlp):
 
 
 
-# ========== 10. KB映射 & 输出（终极稳定版） ==========
+# ========== 10. KB reflection ==========
 def consolidate_relationships_entities(relationships, kb, default_mode="sentence"):
     """
-    兼容 3 / 4 / 5 元组的通用 consolidate 函数。
-    自动：
-    - 清洗实体
-    - 匹配 KB
-    - 输出标准化名字
-    - 输出 Mode / Source
+    A general consolidate function compatible with 3/4/5 tuples.
+    Automatic
+    - Clean the entity
+    - Match KB
+    Output standardized names
+    Output Mode/Source
     """
 
     VALID_REL_WORDS = {
@@ -323,18 +323,14 @@ def consolidate_relationships_entities(relationships, kb, default_mode="sentence
     PRONOUNS = {"his", "her", "their", "my", "your", "our", "its",
                 "him", "me", "them", "you"}
 
-    # ========== 清洗展示姓名 ==========
+    # ========== Clean and display the name ==========
     def clean_name_display(name):
         for ch in [".", '"', "'", "!", "\n"]:
             name = name.replace(ch, "")
         return name.strip()
 
-    # ========== KB 匹配函数 ==========
+    # ========== KB Matching function ==========
     def match_to_kb(ent):
-        """
-        输入 entity(span or str)
-        输出 (QID, 标准KB名字)
-        """
 
         raw = ent.text if hasattr(ent, "text") else str(ent)
         cleaned = re.sub(r"[\s\u00A0\u200B]+", "", raw) \
@@ -346,22 +342,22 @@ def consolidate_relationships_entities(relationships, kb, default_mode="sentence
             alias_clean_list = [a.replace(" ", "").replace(".", "").lower()
                                 for a in entry.get("aliases", [])]
 
-            # 精确匹配
+            
             if cleaned == name_clean or cleaned in alias_clean_list:
                 return qid, entry["name"]
 
-            # 模糊包含匹配
+            
             if cleaned in name_clean or any(cleaned in a for a in alias_clean_list):
                 return qid, entry["name"]
 
-        return "N/A", raw  # 匹配不到时使用原文本
+        return "N/A", raw  
 
-    # ========== 整合输出 ==========
+    # ========== Integrated output ==========
     rows = []
 
     for item in relationships:
 
-        # --- 自动识别 3/4/5 元组 ---
+    
         if len(item) == 3:
             rel, ent1, ent2 = item
             mode_used, source = default_mode, "unknown"
@@ -374,26 +370,26 @@ def consolidate_relationships_entities(relationships, kb, default_mode="sentence
             rel, ent1, ent2, mode_used, source = item
 
         else:
-            print("⚠️ Unexpected relationship tuple:", item)
+            print(" Unexpected relationship tuple:", item)
             continue
 
-        # --- 过滤不在词典中的关系 ---
+        # --- Filter out relationships that are not in the dictionary ---
         if rel.lower() not in VALID_REL_WORDS:
             continue
 
-        # --- 提取文本 ---
+        # --- Extract text ---
         ent1_text = ent1.text if hasattr(ent1, "text") else str(ent1)
         ent2_text = ent2.text if hasattr(ent2, "text") else str(ent2)
 
-        # --- 过滤代词 ---
+        # --- Filtering pronouns ---
         if ent1_text.lower() in PRONOUNS or ent2_text.lower() in PRONOUNS:
             continue
 
-        # --- KB 映射 ---
+        # --- KB reflection ---
         ent1_id, ent1_std = match_to_kb(ent1)
         ent2_id, ent2_std = match_to_kb(ent2)
 
-        # --- 写入行 ---
+        
         rows.append({
             "Relationship": rel.lower(),
             "Entity1": ent1_std,
@@ -404,7 +400,7 @@ def consolidate_relationships_entities(relationships, kb, default_mode="sentence
             "Source": source
         })
 
-    # ========== 保存 CSV ==========
+    # ========== CSV ==========
     df = pd.DataFrame(rows)
     df.to_csv("consolidated_relationships.csv", index=False, encoding="utf-8")
 
@@ -412,31 +408,31 @@ def consolidate_relationships_entities(relationships, kb, default_mode="sentence
 
 
 
-# ========== 11. 主程序 ==========
+# ========== 11. main function ==========
 def main():
     print("✅ Loading spaCy model...")
     nlp = spacy.load("en_core_web_lg")
 
     print("===================================================")
-    print("📘 Loading original text (for main1 sequential)...")
+    print("Loading original text (for main1 sequential)...")
     with open("clean_book.txt", "r", encoding="utf-8") as f:
         text_original = f.read()
 
-    print("📗 Loading coreference-resolved text (for main2 dep)...")
+    print("Loading coreference-resolved text (for main2 dep)...")
     with open("resolved_book.txt", "r", encoding="utf-8") as f:
         text_resolved = f.read()
 
     print("===================================================")
-    print("🔎 Loading Knowledge Base...")
+    print("Loading Knowledge Base...")
     kb = load_knowledge_base(nlp)
 
     # ============================
     # main1: sequential, raw text
     # ============================
     print("===================================================")
-    print("🚀 Extracting main1 relationships from ORIGINAL text (sentence mode)...")
+    print("Extracting main1 relationships from ORIGINAL text (sentence mode)...")
     chunks_main1 = divide_text_by(nlp, text_original, by="sentence")
-    print(f"➡️ main1: {len(chunks_main1)} sentences")
+    print(f"main1: {len(chunks_main1)} sentences")
 
     rels_main1 = chapter_parse_relations(chunks_main1, nlp)
     rels_main1_labeled = [(r[0], r[1], r[2], "sentence", "main1") for r in rels_main1]
@@ -447,9 +443,9 @@ def main():
     # main2: dependency, COREF text
     # ============================
     print("===================================================")
-    print("🧠 Extracting main2 relationships from COREFERENCE text (100-token)...")
+    print("Extracting main2 relationships from COREFERENCE text (100-token)...")
     chunks_main2 = divide_text_by(nlp, text_resolved, by="100token")
-    print(f"➡️ main2: {len(chunks_main2)} chunks")
+    print(f" main2: {len(chunks_main2)} chunks")
 
     rels_main2 = []
     for i, chunk in enumerate(chunks_main2):
@@ -459,17 +455,17 @@ def main():
         rels = extract_dependency_relations(doc)
         rels_main2.extend([(r[0], r[1], r[2], "100token", "main2") for r in rels])
         if (i+1) % 10 == 0:
-            print(f"   ✓ processed {i+1}/{len(chunks_main2)} chunks")
+            print(f" processed {i+1}/{len(chunks_main2)} chunks")
 
-    print(f"✔ main2 extracted {len(rels_main2)} relations")
+    print(f" main2 extracted {len(rels_main2)} relations")
 
 
     # ============================
     # Merge results
     # ============================
     all_relationships = rels_main1_labeled + rels_main2
-    print("===================================================")
-    print(f"🔗 TOTAL merged relationships: {len(all_relationships)}")
+    print("==================================================")
+    print(f"TOTAL merged relationships: {len(all_relationships)}")
 
     # ============================
     # consolidate
@@ -478,7 +474,7 @@ def main():
     print("📦 Consolidating results with KB...")
     consolidate_relationships_entities(all_relationships, kb, default_mode="mixed")
 
-    print("🎉 DONE!")
+    print("DONE!")
 
 
 if __name__ == "__main__":
